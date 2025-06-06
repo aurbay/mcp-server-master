@@ -21,6 +21,13 @@ Alternatively, for projects using pip for dependencies:
 ```bash
 pip install "mcp[cli]"
 ```
+### Installing from pyproject.toml
+
+If you prefer to manage your dependencies using `pyproject.toml`, you can add all libraries to your project:
+
+```bash
+uv sync
+```
 
 ### Running the standalone MCP development tools
 
