@@ -86,10 +86,10 @@ def brave_search_and_extract(query: str, pages: int = 3, results_per_page: int =
 
 if __name__ == "__main__":
     # Example usage
-    query_term = "mcp servers wikipedia"
+    query_term = "donal trump tariff all countries"
     results = brave_search_and_extract(query_term, pages=1, results_per_page=2)
     # Print a summary of results
-    text_length = 5000
+    text_length = 500
     for idx, (url, text) in enumerate(results.items(), start=1):
         print(f"Result {idx}: {url}\n{'-'*80}\n{text[:text_length]}...\n\n")
         
