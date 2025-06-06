@@ -1,4 +1,4 @@
-## Installation
+## Installation Guide
 
 ### Adding MCP to your python project
 
