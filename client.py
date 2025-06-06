@@ -14,7 +14,7 @@ async def main():
     server_params = StdioServerParameters(
         command="python",
         # Make sure to update to the full absolute path to your math_server.py file
-        args=["main.py"],
+        args=["teams/xyz/server.py"],
     )
 
     async with stdio_client(server_params) as (read, write):
@@ -28,8 +28,9 @@ async def main():
             # Create and run the agent
             #agent = create_react_agent("openai:gpt-4.1", tools)
             agent = create_react_agent("google_genai:gemini-2.0-flash", tools)
-            agent_response = await agent.ainvoke({"messages": "what's the price of a Honda Accord in 2020?"})
-            print(agent_response)
+            agent_response = await agent.ainvoke({"messages": "what's the price of a Toyota Camry in 2020?"})
+            responses = agent_response.get("messages", [])            
+            print(responses[-1].content)
             
 if __name__ == "__main__":
     asyncio.run(main())
