@@ -1,0 +1,12 @@
+# Purchase Log File - Generated for Testing
+# Generated on: 2025-06-06T10:32:17.546912
+# Format: timestamp|user_id|product_id|quantity|unit_price|total_amount|status
+# WARNING: This log contains intentional errors for testing purposes
+
+
+2024-09-15 10:32:17|1|11|1|59.99|59.99|completed
+2024-11-12 10:32:17|5|5|2|119.99|239.98|completed
+2025-05-15 10:32:17|7|7|-4|-199.99|799.96|completed
+2025-05-15 10:32:17|2|3|1|129.99|129.99|completed
+2024-10-28 10:32:17|6|9|3|89.99|269.97|cancelled
+2025-01-19 10:32:17|8|7|3|199.99|599.97|completed
