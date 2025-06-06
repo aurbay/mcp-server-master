@@ -2,8 +2,20 @@
 
 ### Adding MCP to your python project
 
+#### Installation with uv (recommended)
+
 We recommend using [uv](https://docs.astral.sh/uv/) to manage your Python projects. 
 
+
+#### Installing from pyproject.toml RECOMENDED
+
+If you prefer to manage your dependencies using `pyproject.toml`, you can add all libraries to your project:
+
+```bash
+uv sync
+```
+
+#### Installing manually 
 If you haven't created a uv-managed project yet, create one:
 
    ```bash
@@ -21,13 +33,16 @@ Alternatively, for projects using pip for dependencies:
 ```bash
 pip install "mcp[cli]"
 ```
-### Installing from pyproject.toml
 
-If you prefer to manage your dependencies using `pyproject.toml`, you can add all libraries to your project:
+### Testing the installation
+
+1. Make sure you activate your virtual environment if you're using one.
+2. Run de `client.py` file provided 
 
 ```bash
-uv sync
+python client.py
 ```
+
 
 ### Running the standalone MCP development tools
 
