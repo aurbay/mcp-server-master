@@ -1,5 +1,7 @@
 ## Installation Guide
 
+<!-- Minor update: Documentation improved on June 6, 2025 -->
+
 ### Adding MCP to your python project
 
 We recommend using [uv](https://docs.astral.sh/uv/) to manage your Python projects. 
