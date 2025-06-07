@@ -27,6 +27,21 @@ def multiply(a: int, b: int) -> int:
     """Multiply two numbers"""
     return a * b
 
+import random
+import pandas as pd
+
+@mcp.tool()
+def gettariff(lista:list[str]) -> any:
+    """return the tariff for each country in lista in the format: country, value"""
+
+    resultado = [f"{item}, {random.randint(1, 100)}" for item in lista]
+    datos = [item.split(", ") for item in resultado]
+    df = pd.DataFrame(datos, columns=['country', 'value'])
+    df.to_csv("tarif.csv",index=False)
+    return "\n".join(resultado)
+
+
+
 
 @mcp.tool()
 def car_price(model: str, year: int) -> str:
