@@ -29,7 +29,8 @@ async def main():
             #agent = create_react_agent("openai:gpt-4.1", tools)
             agent = create_react_agent("google_genai:gemini-2.0-flash", tools)
             #agent_response = await agent.ainvoke({"messages": "what's the price of a Toyota Camry in 2024?"}) 
-            agent_response = await agent.ainvoke({"messages": "what's  Australia and peru tariff?"})
+            #agent_response = await agent.ainvoke({"messages": "what's  Australia and peru tariff?"})
+            agent_response = await agent.ainvoke({"messages": "check the logs"})
             responses = agent_response.get("messages", [])            
             print(responses[-1].content)
             

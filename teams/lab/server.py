@@ -40,6 +40,25 @@ def gettariff(lista:list[str]) -> any:
     df.to_csv("tarif.csv",index=False)
     return "\n".join(resultado)
 
+import sqlite3
+
+@mcp.tool()
+def logs():
+    """ review logs from database file
+    """
+
+    conn = sqlite3.connect("test_data.db")
+    df = pd.read_sql("SELECT * FROM purchases", conn)
+    negativos = df[df['quantity'] < 0]
+
+    archivo ="purchases_wrong.log"
+    negativos.to_csv(archivo, index=False, sep="|", header=False)
+    conn.close()
+
+    if negativos.shape[0] > 0:
+        return f"Se encontraron errores en la base de datos y se creó el archivo {archivo}"
+    else:
+        return "No se encontraron errores en la base de datos"
 
 
 
